@@ -4,16 +4,16 @@ const navSlide = () => {
     const navLists = document.querySelector("nav");
 
     burger.addEventListener("click", () => {
-        navLists.classLists.toggle("nav-active");
-        burger.classLists.toggle("toggle-burger");
+        navLists.classList.toggle("nav-active");
+        burger.classList.toggle("toggle-burger");
     });
 };
 
-navSlide
+navSlide();
 
-// clear form before unload
-Window.onbeforeunload = () => {
+// Clear form before unload
+window.onbeforeunload = () => {
     for (const form of document.getElementsByTagName("form")) {
-        form.reset()
+        form.reset();
     }
 };
